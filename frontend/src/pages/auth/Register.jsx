@@ -35,7 +35,7 @@ const Register = () => {
   }
 
   if (form.password.length < 6) {
-    toast.error("Mật khẩu phải có ít nhất 6 ký tự");
+    toast.error("Mật khẩu phải có ít nhất 6 ký tự và có ít nhất 1 chữ số");
     return;
   }
 
