@@ -461,7 +461,7 @@ export default function Products() {
                               </Link>
 
                               <p className="mt-2 text-xs text-slate-500 line-clamp-2 min-h-[36px]">
-                                {p.description || "Chưa có mô tả sản phẩm"}
+                                {p.description || "không có mô tả sản phẩm"}
                               </p>
 
                               <div className="mt-2 flex items-center gap-1">
