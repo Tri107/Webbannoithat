@@ -31,7 +31,7 @@ export default function Home() {
 
   const heroImages = useMemo(
     () => [
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600&q=80&auto=format&fit=crop",
+      "https://www.lanha.vn/wp-content/uploads/2024/06/thiet-ke-noi-that-nha-pho-117.jpg.webp",
       "https://images.unsplash.com/photo-1493666438817-866a91353ca9?w=1600&q=80&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1600&q=80&auto=format&fit=crop",
     ],
