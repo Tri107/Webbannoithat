@@ -27,7 +27,7 @@ const Login = () => {
     e.preventDefault();
 
     if (!form.email || !form.password) {
-      return toast.error("Vui lòng nhập đầy đủ thông tin");
+      return toast.error("Vui lòng nhập đầy đủ thông tin của mình ");
     }
 
     try {
