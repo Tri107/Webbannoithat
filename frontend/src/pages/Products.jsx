@@ -530,7 +530,7 @@ export default function Products() {
 function formatVND(v) {
   return new Intl.NumberFormat("vi-VN", {
     style: "currency",
-    currency: "VND",
+    currency: "đ",
     maximumFractionDigits: 0,
   }).format(v || 0);
 }
