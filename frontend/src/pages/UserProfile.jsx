@@ -169,7 +169,7 @@ const UserProfile = () => {
                   <DialogHeader>
                     <DialogTitle>Cập nhật hồ sơ</DialogTitle>
                     <DialogDescription>
-                      Thay đổi thông tin cá nhân của bạn tại đây. Nhấn lưu để hoàn tất.
+                      Thay đổi thông tin cá nhân của bạn. Nhấn lưu để hoàn tất.
                     </DialogDescription>
                   </DialogHeader>
                   <form onSubmit={handleUpdate} className="space-y-4 py-4">
