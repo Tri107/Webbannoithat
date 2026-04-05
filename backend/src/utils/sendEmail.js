@@ -62,7 +62,8 @@ export const sendOrderConfirmationEmail = async (email, orderData) => {
         // Đảm bảo URL ảnh đầy đủ
         let imageUrl = item.image || 'https://via.placeholder.com/60?text=No+Image';
         if (imageUrl && !imageUrl.startsWith('http')) {
-          imageUrl = `http://localhost:9999/${imageUrl.replace(/\\/g, '/')}`;
+          const baseUrl = process.env.SERVER_URL || 'http://localhost:9999';
+          imageUrl = `${baseUrl}/${imageUrl.replace(/\\/g, '/')}`;
         }
         
         return `

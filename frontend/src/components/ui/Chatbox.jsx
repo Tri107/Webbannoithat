@@ -30,7 +30,7 @@ export default function ChatBox() {
 
   // 🔥 TẠO SOCKET VÀ EVENT LISTENER
   useEffect(() => {
-    const socket = io("http://localhost:9999", {
+    const socket = io(import.meta.env.VITE_API_URL || "http://localhost:9999", {
       transports: ["websocket"],
     });
     socketRef.current = socket;
