@@ -25,7 +25,7 @@ export default function AdminChat() {
 
   // Khởi tạo connection và tải danh sách phòng chat
   useEffect(() => {
-    socketRef.current = io("http://localhost:9999", {
+    socketRef.current = io(import.meta.env.VITE_API_URL || "http://localhost:9999", {
       transports: ["websocket"],
     });
 

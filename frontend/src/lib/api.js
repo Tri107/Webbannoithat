@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:9999/api";
+const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:9999"}/api`;
 
 // Cập nhật hàm getAuthHeaders để nhận biết khi nào đang gửi file (FormData)
 const getAuthHeaders = (isFormData = false) => {
