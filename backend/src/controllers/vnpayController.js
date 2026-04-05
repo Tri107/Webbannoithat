@@ -26,7 +26,7 @@ export const createPaymentUrl = async (req, res) => {
             vnp_OrderInfo: `Thanh toan don hang ${txnRef}`,
             vnp_OrderType: ProductCode.Other,
             vnp_Locale: VnpLocale.VN,
-            vnp_ReturnUrl: "http://localhost:9999/api/vnpay/return",
+            vnp_ReturnUrl: `${process.env.SERVER_URL || 'http://localhost:9999'}/api/vnpay/return`,
             vnp_CreateDate: dateFormat(new Date()),
             vnp_ExpireDate: dateFormat(new Date(Date.now() + 60 * 60 * 1000)),
         });
