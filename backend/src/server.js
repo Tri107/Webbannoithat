@@ -21,10 +21,16 @@ const app = express();
 //  Tạo HTTP server từ express (bắt buộc để dùng socket)
 const server = http.createServer(app);
 
+// Khởi tạo danh sách origin cho phép (bao gồm preview của Vercel)
+const allowedOrigins = process.env.CLIENT_URL 
+  ? process.env.CLIENT_URL.split(',').map(url => url.trim()) 
+  : ['http://localhost:5173'];
+const corsOrigin = [...allowedOrigins, /\.vercel\.app$/];
+
 //  Khởi tạo Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173', 
+    origin: corsOrigin, 
     credentials: true
   },
   maxHttpBufferSize: 1e7 // Tăng payload socket lên 10MB để gửi ảnh Base64
@@ -34,7 +40,7 @@ const io = new Server(server, {
 export { io };
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173', 
+  origin: corsOrigin, 
   credentials: true // Cho phép gửi/nhận cookie
 }));
 
